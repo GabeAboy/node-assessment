@@ -44,7 +44,7 @@ Create the following endpoints in `server.js` using express.
    `POST: /api/users/language` + userId
 
 8.  Add to a users favorite forums. Use params to get a user by id. You will receive the data on the body `{add: 'New Forum'}`. Return a valid status code. #5 must be working in order for this test to pass.
-   `POST: /api/users/forums/` + userId
+   `POST: /api/users/forums/` + userId***
 
 9. Remove from a users favorite forums. Use delete REST method. You will receive the user id in the url params. You will receive the forum to delete in the query. You will need to search your array and splice it out.
    `DELETE: /api/users/forums/` + userID + `?favorite=` + forum name.
