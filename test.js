@@ -97,7 +97,6 @@ test('Change a users language', async t => {
 
   req = await request(app)
     .get('/api/users/' + id)
-
   t.is(req.status, 200);
   t.truthy(req.body.language);
   t.is(req.body.language, 'french');
@@ -124,6 +123,7 @@ test('add to a users favorite forums', async t => {
   let res = await request(app)
     .post('/api/users')
     .send(newUser)
+    console.log('Engines Engage');
 
   t.is(res.status, 200);
   t.truthy(res.body.id);
@@ -141,6 +141,7 @@ test('add to a users favorite forums', async t => {
     .get('/api/users/' + id)
 
   t.is(res.status, 200);
+  console.log('This is Testing',res.body);
   t.is(true, Array.isArray(res.body.favorites))
 
   t.is(
